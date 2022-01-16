@@ -1,0 +1,138 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.LMT -I -1 -M 15 -W 0.0
+Relation:     Group17_extended
+Instances:    178
+Attributes:   23
+              Country
+              Year
+              Rank
+              C1: Security Apparatus
+              C2: Factionalized Elites
+              C3: Group Grievance
+              E1: Economy
+              E2: Economic Inequality
+              E3: Human Flight and Brain Drain
+              P1: State Legitimacy
+              P2: Public Services
+              P3: Human Rights
+              S1: Demographic Pressures
+              S2: Refugees and IDPs
+              X1: External Intervention
+              Corruption Index
+              Terrorism Index
+              Gini Index
+              Trade in Services
+              Inflation
+              Urban Population
+              Total
+              Fragile State
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic model tree 
+------------------
+: LM_1:34/34 (178)
+
+Number of Leaves  : 	1
+
+Size of the Tree : 	1
+LM_1:
+Class Alert :
+-710.95 + 
+[Country=Haiti] * -4.49 +
+[Country=Mozambique] * -1.5 +
+[C1: Security Apparatus] * 0.72 +
+[C3: Group Grievance] * 0.9  +
+[E2: Economic Inequality] * -0.46 +
+[P2: Public Services] * 0.27 +
+[S2: Refugees and IDPs] * 0.38 +
+[Terrorism Index] * 0.3  +
+[Total] * 7.89
+
+Class Warning :
+-37.89 + 
+[Country=Saudi Arabia] * 1.17 +
+[Country=Vietnam] * 1.2  +
+[Country=Belize] * 0.98 +
+[Country=Dominican Republic] * 0.89 +
+[Country=Suriname] * 1.78 +
+[Country=Kazakhstan] * -0.79 +
+[Country=Malaysia] * -2.24 +
+[Country=Jamaica] * -2.21 +
+[Country=Grenada] * -1.64 +
+[Country=Trinidad and Tobago] * -1.88 +
+[Country=Panama] * -2.25 +
+[C2: Factionalized Elites] * 0.18 +
+[E2: Economic Inequality] * 0.84 +
+[E3: Human Flight and Brain Drain] * 0.83 +
+[Corruption Index] * 0.7  +
+[Terrorism Index] * -0.13 +
+[Gini Index] * 0.39 +
+[Trade in Services] * 0.37 +
+[Inflation] * 0.56 +
+[Total] * 0.26
+
+Class Stable :
+30.61 + 
+[Country=Saudi Arabia] * -1.09 +
+[Country=Belize] * -0.86 +
+[Country=Suriname] * -0.85 +
+[Country=Kazakhstan] * 1.98 +
+[Country=Malaysia] * 2.37 +
+[Country=Jamaica] * 3.17 +
+[Country=Cuba] * 3.07 +
+[Country=Grenada] * 1.77 +
+[Country=Trinidad and Tobago] * 1.91 +
+[C2: Factionalized Elites] * -0.17 +
+[E3: Human Flight and Brain Drain] * -0.42 +
+[P2: Public Services] * -0.56 +
+[S2: Refugees and IDPs] * -1.24 +
+[Corruption Index] * -0.27 +
+[Terrorism Index] * -0.38 +
+[Inflation] * -0.34 +
+[Total] * -0.3
+
+Class Sustainable :
+122.65 + 
+[Country=Japan] * -2.98 +
+[Country=Uruguay] * -1.49 +
+[Country=Slovenia] * -13.52 +
+[E2: Economic Inequality] * -1.34 +
+[Corruption Index] * -0.38 +
+[Trade in Services] * -0.2 +
+[Total] * -3.33
+
+
+Time taken to build model: 0.35 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         173               97.191  %
+Incorrectly Classified Instances         5                2.809  %
+Kappa statistic                          0.9558
+Mean absolute error                      0.017 
+Root mean squared error                  0.1161
+Relative absolute error                  5.3181 %
+Root relative squared error             29.0631 %
+Total Number of Instances              178     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Alert
+                 1.000    0.012    0.989      1.000    0.995      0.989    1.000     1.000     Warning
+                 0.938    0.015    0.957      0.938    0.947      0.928    0.992     0.970     Stable
+                 0.889    0.013    0.889      0.889    0.889      0.876    0.997     0.980     Sustainable
+Weighted Avg.    0.972    0.011    0.972      0.972    0.972      0.962    0.997     0.990     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 20  0  0  0 |  a = Alert
+  0 92  0  0 |  b = Warning
+  0  1 45  2 |  c = Stable
+  0  0  2 16 |  d = Sustainable
+

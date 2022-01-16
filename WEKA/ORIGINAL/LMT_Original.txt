@@ -1,0 +1,130 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.LMT -I -1 -M 15 -W 0.0
+Relation:     Group17_original
+Instances:    178
+Attributes:   17
+              Country
+              Year
+              Rank
+              Total
+              C1: Security Apparatus
+              C2: Factionalized Elites
+              C3: Group Grievance
+              E1: Economy
+              E2: Economic Inequality
+              E3: Human Flight and Brain Drain
+              P1: State Legitimacy
+              P2: Public Services
+              P3: Human Rights
+              S1: Demographic Pressures
+              S2: Refugees and IDPs
+              X1: External Intervention
+              Fragile State
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic model tree 
+------------------
+: LM_1:54/54 (178)
+
+Number of Leaves  : 	1
+
+Size of the Tree : 	1
+LM_1:
+Class Alert :
+-734.5 + 
+[Country=Cote dIvoire] * -22.74 +
+[Country=Mauritania] * -16.75 +
+[Country=Angola] * -8.99 +
+[Total] * 8.62 +
+[C2: Factionalized Elites] * -1.85 +
+[P2: Public Services] * 0.36 +
+[S2: Refugees and IDPs] * 0.38
+
+Class Warning :
+-54.67 + 
+[Country=Belarus] * 1.06 +
+[Country=Samoa] * 0.92 +
+[Country=Macedonia] * 1.71 +
+[Country=Belize] * 0.89 +
+[Country=Suriname] * 4.69 +
+[Country=Jamaica] * 0.9  +
+[Country=Kazakhstan] * -2.32 +
+[Country=Cuba] * -0.91 +
+[Country=Albania] * -5.68 +
+[Country=Malaysia] * -1.49 +
+[Country=Botswana] * -0.79 +
+[Country=Montenegro] * -1.65 +
+[Rank=110th] * 4.36 +
+[Total] * 0.64 +
+[C1: Security Apparatus] * 0.63 +
+[C2: Factionalized Elites] * 0.29 +
+[C3: Group Grievance] * 0.17 +
+[E1: Economy] * 0.77 +
+[E3: Human Flight and Brain Drain] * 0.63 +
+[P3: Human Rights] * 0.11
+
+Class Stable :
+51.85 + 
+[Country=Belize] * -1.87 +
+[Country=Suriname] * -0.9 +
+[Country=Jamaica] * -0.83 +
+[Country=Kazakhstan] * 4.58 +
+[Country=Cuba] * 4.04 +
+[Country=Albania] * 3.62 +
+[Country=Malaysia] * 1.67 +
+[Country=Botswana] * 4.96 +
+[Country=Montenegro] * 1.79 +
+[Country=Grenada] * 1.81 +
+[Total] * -0.69 +
+[C1: Security Apparatus] * -0.66 +
+[C3: Group Grievance] * -0.14 +
+[E1: Economy] * -0.77 +
+[P2: Public Services] * -1.04 +
+[P3: Human Rights] * -0.11 +
+[S2: Refugees and IDPs] * -0.4
+
+Class Sustainable :
+161.42 + 
+[Country=Malta] * -1.5 +
+[Country=Uruguay] * -4.5 +
+[Country=Japan] * -6.02 +
+[Country=South Korea] * -4.5 +
+[Country=France] * -15.36 +
+[Total] * -4.62 +
+[X1: External Intervention] * -0.28
+
+
+Time taken to build model: 0.71 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         171               96.0674 %
+Incorrectly Classified Instances         7                3.9326 %
+Kappa statistic                          0.9413
+Mean absolute error                      0.023 
+Root mean squared error                  0.1189
+Relative absolute error                  6.8306 %
+Root relative squared error             29.0257 %
+Total Number of Instances              178     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.014    0.939      1.000    0.969      0.963    0.998     0.990     Alert
+                 0.965    0.032    0.965      0.965    0.965      0.932    0.995     0.995     Warning
+                 0.932    0.015    0.953      0.932    0.943      0.924    0.998     0.993     Stable
+                 0.944    0.000    1.000      0.944    0.971      0.969    1.000     0.997     Sustainable
+Weighted Avg.    0.961    0.021    0.961      0.961    0.961      0.939    0.997     0.994     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 31  0  0  0 |  a = Alert
+  2 82  1  0 |  b = Warning
+  0  3 41  0 |  c = Stable
+  0  0  1 17 |  d = Sustainable
+

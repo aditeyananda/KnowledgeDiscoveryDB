@@ -1,0 +1,98 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     Group17_extended
+Instances:    178
+Attributes:   23
+              Country
+              Year
+              Rank
+              C1: Security Apparatus
+              C2: Factionalized Elites
+              C3: Group Grievance
+              E1: Economy
+              E2: Economic Inequality
+              E3: Human Flight and Brain Drain
+              P1: State Legitimacy
+              P2: Public Services
+              P3: Human Rights
+              S1: Demographic Pressures
+              S2: Refugees and IDPs
+              X1: External Intervention
+              Corruption Index
+              Terrorism Index
+              Gini Index
+              Trade in Services
+              Inflation
+              Urban Population
+              Total
+              Fragile State
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=23 #classindex=22
+Network structure (nodes followed by parents)
+Country(178): Fragile State 
+Year(1): Fragile State 
+Rank(178): Fragile State 
+C1: Security Apparatus(5): Fragile State 
+C2: Factionalized Elites(4): Fragile State 
+C3: Group Grievance(4): Fragile State 
+E1: Economy(4): Fragile State 
+E2: Economic Inequality(4): Fragile State 
+E3: Human Flight and Brain Drain(4): Fragile State 
+P1: State Legitimacy(4): Fragile State 
+P2: Public Services(5): Fragile State 
+P3: Human Rights(4): Fragile State 
+S1: Demographic Pressures(4): Fragile State 
+S2: Refugees and IDPs(4): Fragile State 
+X1: External Intervention(4): Fragile State 
+Corruption Index(4): Fragile State 
+Terrorism Index(2): Fragile State 
+Gini Index(2): Fragile State 
+Trade in Services(2): Fragile State 
+Inflation(3): Fragile State 
+Urban Population(2): Fragile State 
+Total(4): Fragile State 
+Fragile State(4): 
+LogScore Bayes: -4681.86535836559
+LogScore BDeu: -16169.105794174342
+LogScore MDL: -12332.785280698672
+LogScore ENTROPY: -8138.13149673722
+LogScore AIC: -9757.13149673722
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         173               97.191  %
+Incorrectly Classified Instances         5                2.809  %
+Kappa statistic                          0.9562
+Mean absolute error                      0.0157
+Root mean squared error                  0.1047
+Relative absolute error                  4.9068 %
+Root relative squared error             26.2085 %
+Total Number of Instances              178     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.006    0.952      1.000    0.976      0.973    1.000     1.000     Alert
+                 0.978    0.000    1.000      0.978    0.989      0.978    1.000     1.000     Warning
+                 0.958    0.015    0.958      0.958    0.958      0.943    0.998     0.994     Stable
+                 0.944    0.013    0.895      0.944    0.919      0.910    0.998     0.982     Sustainable
+Weighted Avg.    0.972    0.006    0.973      0.972    0.972      0.961    0.999     0.997     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 20  0  0  0 |  a = Alert
+  1 90  1  0 |  b = Warning
+  0  0 46  2 |  c = Stable
+  0  0  1 17 |  d = Sustainable
+
